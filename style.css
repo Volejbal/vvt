@@ -35,7 +35,8 @@ html {
 
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
     color: var(--text);
     background: var(--background);
     line-height: 1.7;
@@ -257,7 +258,7 @@ nav a:hover {
 
 .btn {
 
-    background:var(--accent);
+    background:var(--blue);
 
     color:white;
 
@@ -274,7 +275,7 @@ nav a:hover {
 
 .btn:hover {
 
-    background:var(--accent-dark);
+    background:var(--blue-dark);
 
     transform:translateY(-2px);
 
