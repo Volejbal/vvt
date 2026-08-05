@@ -699,4 +699,98 @@ nav a:hover {
 
     }
 
+}/* ===============================
+   MOBILNÍ MENU
+================================ */
+
+
+.menu-toggle {
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    .header .container {
+
+        flex-direction:row;
+
+        height:80px;
+
+    }
+
+
+
+    .menu-toggle {
+
+        display:block;
+
+    }
+
+
+
+    .main-nav {
+
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        width:100%;
+
+
+        background:#101820;
+
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+
+        padding:30px 0;
+
+
+        transform:translateY(-120%);
+
+
+        transition:.35s ease;
+
+
+    }
+
+
+
+    .main-nav a {
+
+        padding:10px;
+
+    }
+
+
+
+    .main-nav.open {
+
+        transform:translateY(0);
+
+    }
+
+
 }
