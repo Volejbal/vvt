@@ -878,5 +878,122 @@ nav a:hover {
 
         grid-template-columns:1fr;
 
+    }/* ===============================
+   MÍSTO KONÁNÍ
+================================ */
+
+
+.location-grid {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:stretch;
+
+}
+
+
+
+.location-text {
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.location-text h3 {
+
+    margin-bottom:12px;
+
+    color:var(--dark);
+
+}
+
+
+
+.location-text p {
+
+    margin-bottom:30px;
+
+}
+
+
+
+.map-box {
+
+    min-height:400px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #17232d,
+        #101820
+    );
+
+    border-radius:var(--radius);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.map-box span {
+
+    display:block;
+
+    color:#ffb36b;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.8rem;
+
+}
+
+
+
+.map-box strong {
+
+    display:block;
+
+    font-size:2rem;
+
+    margin:10px 0;
+
+}
+
+
+
+@media(max-width:900px){
+
+    .location-grid {
+
+        grid-template-columns:1fr;
+
     }
+
+}
    
