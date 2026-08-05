@@ -104,4 +104,35 @@ window.addEventListener("scroll", () => {
     });
 
 
+});/* ===============================
+   MOBILNÍ MENU
+================================ */
+
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+
+menuToggle.addEventListener("click", () => {
+
+
+    mainNav.classList.toggle("open");
+
+
+});
+
+
+
+document.querySelectorAll(".main-nav a").forEach(link => {
+
+
+    link.addEventListener("click", () => {
+
+
+        mainNav.classList.remove("open");
+
+
+    });
+
+
 });
