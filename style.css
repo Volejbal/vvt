@@ -1,3 +1,26 @@
+/* =========================================
+   Veterinární volejbalový turnaj
+   Modern sport design
+========================================= */
+
+
+/* ---------- ZÁKLAD ---------- */
+
+:root {
+    --dark: #101820;
+    --dark-soft: #17232d;
+    --light: #ffffff;
+    --text: #27313a;
+    --gray: #6b7280;
+    --accent: #e85d04;
+    --accent-dark: #c94f00;
+    --background: #f5f7fa;
+    --border: #e5e7eb;
+
+    --shadow: 0 15px 40px rgba(0,0,0,0.08);
+    --radius: 18px;
+}
+
 
 * {
     margin: 0;
@@ -5,209 +28,675 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary: #0b3d91;
-    --secondary: #f4b400;
-    --dark: #111827;
-    --light: #f8fafc;
-    --white: #ffffff;
-    --gray: #64748b;
-}
-
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: var(--light);
-    color: var(--dark);
-    line-height: 1.6;
-}
 
 html {
     scroll-behavior: smooth;
 }
 
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.7;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: min(1180px, 90%);
     margin: auto;
 }
 
-/* HEADER */
 
-header {
-    background: var(--primary);
-    color: white;
-    position: sticky;
+
+/* ---------- HEADER ---------- */
+
+
+.header {
+
+    position: fixed;
     top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(16,24,32,0.92);
+
+    backdrop-filter: blur(12px);
+
     z-index: 1000;
+
 }
 
-.navbar {
+
+.header .container {
+
+    height: 82px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    justify-content: space-between;
+
 }
+
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
+
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    max-width: 320px;
+
 }
+
+
+nav {
+
+    display: flex;
+    gap: 28px;
+
+}
+
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 600;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: .95rem;
+
+    transition: .3s;
+
 }
+
 
 nav a:hover {
-    color: var(--secondary);
+
+    color: white;
+
 }
 
 
-/* HERO */
+
+/* ---------- HERO ---------- */
+
 
 .hero {
-    min-height: 80vh;
+
+    min-height: 100vh;
+
+    position: relative;
+
     display: flex;
+
     align-items: center;
+
+    color:white;
+
     background:
-        linear-gradient(
-            rgba(11,61,145,0.75),
-            rgba(11,61,145,0.75)
-        ),
-        url("images/hero.jpg") center/cover;
-    color: white;
+
+    linear-gradient(
+        rgba(16,24,32,.75),
+        rgba(16,24,32,.85)
+    ),
+
+    url("images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
 }
+
 
 .hero-content {
-    max-width: 700px;
+
+    position: relative;
+
+    padding-top: 80px;
+
+    max-width: 850px;
+
 }
+
+
+.subtitle {
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: .9rem;
+
+    color:#ffb36b;
+
+    margin-bottom:20px;
+
+}
+
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: 20px;
-}
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
+    font-size: clamp(2.5rem,5vw,4.5rem);
 
-.button {
-    display: inline-block;
-    background: var(--secondary);
-    color: #111;
-    padding: 14px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+    line-height:1.1;
+
+    margin-bottom:25px;
+
 }
 
 
-/* SECTIONS */
+.intro {
 
-section {
-    padding: 70px 0;
-}
+    font-size:1.2rem;
 
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
+    max-width:650px;
 
-.section-title h2 {
-    font-size: 2.2rem;
+    color:rgba(255,255,255,.9);
+
 }
 
 
-/* CARDS */
+.hero-info {
+
+    display:flex;
+
+    gap:50px;
+
+    margin:40px 0;
+
+}
+
+
+.hero-info div {
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.hero-info span {
+
+    font-size:.85rem;
+
+    opacity:.7;
+
+}
+
+
+.hero-info strong {
+
+    font-size:1.2rem;
+
+}
+
+
+
+.buttons {
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+.btn {
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:14px 32px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.btn:hover {
+
+    background:var(--accent-dark);
+
+    transform:translateY(-2px);
+
+}
+
+
+.btn.secondary {
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.5);
+
+}
+
+
+
+.btn.secondary:hover {
+
+    background:white;
+
+    color:var(--dark);
+
+}
+
+
+
+/* ---------- SEKCE ---------- */
+
+
+.section {
+
+    padding:100px 0;
+
+}
+
+
+.section-heading {
+
+    margin-bottom:45px;
+
+}
+
+
+.section-heading span {
+
+    color:var(--accent);
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+
+}
+
+
+.section-heading h2 {
+
+    font-size:2.4rem;
+
+    margin-top:10px;
+
+    color:var(--dark);
+
+}
+
+
+
+.lead {
+
+    max-width:900px;
+
+    font-size:1.15rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* ---------- PROGRAM ---------- */
+
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
 }
+
 
 .card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
 }
+
+
+.card:hover {
+
+    transform:translateY(-6px);
+
+}
+
 
 .card h3 {
-    color: var(--primary);
-    margin-bottom: 15px;
+
+    color:var(--dark);
+
+    margin-bottom:20px;
+
+    font-size:1.4rem;
+
 }
 
 
-/* TABLE */
+.card li {
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-}
+    margin-bottom:10px;
 
-th {
-    background: var(--primary);
-    color: white;
-}
-
-th, td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
 }
 
 
-/* GALLERY */
+
+/* ---------- TABULKA ---------- */
+
+
+.results-table {
+
+    width:100%;
+
+    background:white;
+
+    border-collapse:collapse;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.results-table th {
+
+    background:var(--dark);
+
+    color:white;
+
+    text-align:left;
+
+    padding:18px;
+
+}
+
+
+.results-table td {
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+
+/* ---------- GALERIE ---------- */
+
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 20px;
-}
 
-.gallery img {
-    width: 100%;
-    border-radius: 15px;
-    transition: transform .3s;
-}
+    display:grid;
 
-.gallery img:hover {
-    transform: scale(1.05);
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
 }
 
 
-/* FOOTER */
+.gallery-item {
 
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 30px;
+    aspect-ratio:1/1;
+
+    background:#ddd;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
 }
 
 
-/* MOBILE */
+.gallery-item img {
 
-@media(max-width:768px){
+    width:100%;
 
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* ---------- PARTNEŘI ---------- */
+
+
+.partners {
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.partner {
+
+    background:white;
+
+    height:140px;
+
+    border-radius:var(--radius);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--gray);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* ---------- KONTAKT ---------- */
+
+
+.contact-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+.contact-grid div {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.contact-grid h3 {
+
+    margin-bottom:10px;
+
+}
+
+
+
+/* ---------- FOOTER ---------- */
+
+
+.site-footer {
+
+    background:var(--dark);
+
+    color:white;
+
+    padding:40px 0;
+
+    text-align:center;
+
+}
+
+
+.site-footer p {
+
+    opacity:.8;
+
+}
+
+
+
+/* ---------- MOBIL ---------- */
+
+
+@media(max-width:900px){
+
+
+    .header .container {
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px 0;
+
+        gap:15px;
+
     }
 
-    nav a {
-        margin: 0 10px;
+
+    nav {
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
     }
 
-    .hero {
-        min-height: 70vh;
+
+    .hero-info {
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .partners {
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .contact-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .hero h1 {
+
+        font-size:2.4rem;
+
+    }
+
+
+    .buttons {
+
+        flex-direction:column;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .section {
+
+        padding:70px 0;
+
     }
 
 }
